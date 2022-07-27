@@ -22,7 +22,7 @@ class HomePageMainTile extends StatelessWidget {
         Heading(heading:heading,),
         kheight,
       LimitedBox(
-          maxHeight: size.width*0.55,
+          maxHeight: size.width*0.5,
         maxWidth: size.width*0.35,
         // maxHeight:  size.width*0.6,
         // maxWidth:  size.width*0.4,

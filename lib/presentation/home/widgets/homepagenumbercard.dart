@@ -22,7 +22,7 @@ class HomepageNumberCard extends StatelessWidget {
         Heading(heading: heading),
         kheight,
         LimitedBox(
-        maxHeight:  size.width*0.6,
+        maxHeight:  size.width*0.5,
         maxWidth:  size.width*0.4,
           child: ListView(
             scrollDirection: Axis.horizontal,
@@ -72,8 +72,8 @@ class NumberCard extends StatelessWidget {
             ],
           ),
           Positioned(
-            bottom: -10,
-          left: 2,
+            bottom: -22,
+            left: 2,
         
           
             child: BorderedText(
