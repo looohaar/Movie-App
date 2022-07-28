@@ -30,7 +30,7 @@ class ScreenNewAndHot extends StatelessWidget {
           child: TabBarView(
               children: [
                 comingSoonBluilder(context),
-              EveryoneWatchingWidget(),
+              EveryoneWatchingBuilder(context),
               ]),
         ),
       ),
@@ -47,11 +47,12 @@ class ScreenNewAndHot extends StatelessWidget {
     );
   }
 
-// Widget  EveryoneWatchingBuilder(BuildContext context){
-//   final Size size = MediaQuery.of(context).size;
-//   return ListView.builder(
-//     itemBuilder: (context, index)=> EveryoneWatchingWidget());
-// }
+Widget  EveryoneWatchingBuilder(BuildContext context){
+  final Size size = MediaQuery.of(context).size;
+  return ListView.builder(
+    itemCount: 10,
+  itemBuilder: (context, index)=> EveryoneWatchingWidget());
+}
 
 }
 

@@ -14,51 +14,47 @@ class EveryoneWatchingWidget extends StatelessWidget {
     final Size size= MediaQuery.of(context).size;
     return Container(
        width: double.infinity,
-      color: Colors.white,
-      height: size.width*1 ,
+      // color: Colors.white,
+      height: size.width*1.35 ,
        
-      child: SizedBox(
-        
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CustumNameDescription(description:
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        CustumNameDescription(description:
    "Years after moving to a remote \ntown, ex-cop Pipa is pulled back into \nthe dark world she thought she'd left \nbehind when a corpse appears on \nher property.",
-          name: 'Better Call' ,),
-          kheight40,
-          EveryoneWatchingVideoWidget(url: 'https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/8cxu2iB5XkBaQr93vIBVZD2jVSq.jpg'),
-          kheight20,
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children:const [
-              CustomIconButton(icon:Icons.share, 
-              label: 'Share',
-               size: 15, 
-              color: kGreyColor, 
-              iconSize: 30, 
-              iconColor: kwhite),
-              kwidth,
-               CustomIconButton(icon: Icons.add, 
-              label: 'My List',
-               size: 15, 
-              color:  kGreyColor, 
+        name: 'Better Call' ,),
+        kheight40,
+        EveryoneWatchingVideoWidget(url: 'https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/8cxu2iB5XkBaQr93vIBVZD2jVSq.jpg'),
+        kheight20,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children:const [
+            CustomIconButton(icon:Icons.share, 
+            label: 'Share',
+             size: 15, 
+            color: kGreyColor, 
+            iconSize: 30, 
+            iconColor: kwhite),
+            kwidth,
+             CustomIconButton(icon: Icons.add, 
+            label: 'My List',
+             size: 15, 
+            color:  kGreyColor, 
+           iconSize: 30, 
+            iconColor: kwhite),
+            kwidth,
+             CustomIconButton(icon: Icons.play_arrow, 
+            label: 'Play',
+             size: 15, 
+            color:  kGreyColor, 
              iconSize: 30, 
-              iconColor: kwhite),
-              kwidth,
-               CustomIconButton(icon: Icons.play_arrow, 
-              label: 'Play',
-               size: 15, 
-              color:  kGreyColor, 
-               iconSize: 30, 
-              iconColor: kwhite),
-              kwidth
-            ],
+            iconColor: kwhite),
+            kwidth
+          ],
 
-          )
+        )
 
-        ],
-
-        ),
+      ],
 
       ),
     );
