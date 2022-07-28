@@ -2,6 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/core/colors/constants/constants.dart';
+import 'package:netflix_clone/presentation/newandhot/widgets/commonwidgets.dart';
 
 import '../../../core/colors/colors.dart';
 
@@ -17,7 +18,7 @@ class ComingSooonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size= MediaQuery.of(context).size;
     return Container(
-        height: size.width * 1.2,
+        height: size.width * 1.3,
         width: double.infinity,
         child: Row(
           children: [
@@ -49,45 +50,14 @@ class ComingSooonWidget extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Stack(
-                  children: [
-                    SizedBox(
-                      width: size.width - 50,
-                      height: size.width * .6,
-                      child: Image.network(
-                        'https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/rlCRM7U5g2hcU1O8ylGcqsMYHIP.jpg',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Positioned(
-                      right: 5,
-                      bottom: 5,
-                      child: CircleAvatar(
-                        backgroundColor: Colors.black.withOpacity(0.5),
-                        radius: 30,
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.volume_off,
-                              size: 30,
-                            )),
-                      ),
-                    ),
-                  ],
-                ),
+                ComingSoonVideoWidget(url:  'https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/rlCRM7U5g2hcU1O8ylGcqsMYHIP.jpg',),
                 kheight,
                 Row(
                 
 
                   children: [
                     // moviename
-                    Text(
-                      'Ms.Marvel',
-                      style: TextStyle(
-                          color: kwhite,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 30),
-                    ),
+                   MovieName(movieName: 'Ms. Marvel'),
                     kwidth,
                     kwidth,
                     kwidth,
@@ -97,66 +67,41 @@ class ComingSooonWidget extends StatelessWidget {
                     // icons and buttons
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          children: const [
-                            Icon(
-                              CupertinoIcons.bell,
-                              color: kwhite,
-                              size: 30,
-                            ),
-                            Text(
-                              'Remind Me',
-                              style: TextStyle(
-                                  color: kGreyColor,
-                                  fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        kwidth,
-                        Column(
-                          children: const [
-                            Icon(
-                              CupertinoIcons.info,
-                              color: kwhite,
-                              size: 30,
-                            ),
-                            Text(
-                              'Info',
-                              style: TextStyle(
-                                  color: kGreyColor,
-                                  fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        )
+                      children: const[
+                       CustomIconButton(icon: CupertinoIcons.bell,
+                       iconColor: kwhite,
+                       iconSize: 25,
+                        label: 'Remind Me',
+                         size: 13,
+                          color: kGreyColor),
+                          kwidth,
+                          kwidth,
+                          CustomIconButton(
+                            icon: Icons.info,
+                           label: 'Info',
+                            size: 13,
+                             color: kGreyColor, 
+                            iconSize: 25, 
+                            iconColor: kwhite)
                       ],
                     )
                   ],
                 ),
                 // Release Day
-                Text(
-                  'Coming on Friday',
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: kGreyColor),
-                ),
+                ReleaseDay(releaseDay: 'Coming on Friday',),
                 kheight20,
-                Text(
-                  'Ms.Marvel',
-                  style: TextStyle(
-                      color: kwhite,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20),
-                ),
-                kheight,
-                Text(
-                  "asdfadsfdsf adfafadsfa asdf\n adfafadsfa asdf afadfa asdfdfd\n asdfadsfdsf adfafadsfa",
-                  style: TextStyle(color: kGreyColor, fontSize: 17),
-                )
+                CustumNameDescription(
+                  description: "Years after moving to a remote \ntown, ex-cop Pipa is pulled back into \nthe dark world she thought she'd left \nbehind when a corpse appears on \nher property.",
+                name: 'Ms. Marvel',)
               ],
             )
           ],
         ));
   }
 }
+
+
+
+
+// width: size.width - 50,
+//           height: size.width * .6,

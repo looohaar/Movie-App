@@ -6,10 +6,11 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
 import 'package:netflix_clone/core/colors/constants/constants.dart';
-import 'package:netflix_clone/presentation/newandhot/widgets/ComingSoonWidget.dart';
-import 'package:netflix_clone/presentation/newandhot/widgets/CustomAppBar.dart';
+import 'package:netflix_clone/presentation/newandhot/widgets/comingsoonwidget.dart';
+import 'package:netflix_clone/presentation/newandhot/widgets/commonwidgets.dart';
 
 import '../home/widgets/background_card.dart';
+import 'widgets/everyonewatchingwidget.dart';
 
 class ScreenNewAndHot extends StatelessWidget {
   const ScreenNewAndHot({Key? key}) : super(key: key);
@@ -27,8 +28,10 @@ class ScreenNewAndHot extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.only(top:15),
           child: TabBarView(
-              children: [comingSoonBluilder(context),
-               Text('Everyone Watching')]),
+              children: [
+                comingSoonBluilder(context),
+              EveryoneWatchingWidget(),
+              ]),
         ),
       ),
     );
@@ -43,5 +46,12 @@ class ScreenNewAndHot extends StatelessWidget {
      
     );
   }
+
+// Widget  EveryoneWatchingBuilder(BuildContext context){
+//   final Size size = MediaQuery.of(context).size;
+//   return ListView.builder(
+//     itemBuilder: (context, index)=> EveryoneWatchingWidget());
+// }
+
 }
 
