@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:netflix_clone/presentation/search/search.dart';
-import 'package:netflix_clone/presentation/search/widgets/commonwidgets.dart';
+import 'package:netflix_clone/view/search/search.dart';
+import 'package:netflix_clone/view/search/widgets/commonwidgets.dart';
 
 import '../../../core/colors/constants/constants.dart';
 

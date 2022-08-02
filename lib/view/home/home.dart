@@ -6,9 +6,9 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
 import 'package:netflix_clone/core/colors/constants/constants.dart';
-import 'package:netflix_clone/presentation/home/widgets/background_card.dart';
-import 'package:netflix_clone/presentation/home/widgets/homepagemaintile.dart';
-import 'package:netflix_clone/presentation/home/widgets/homepagenumbercard.dart';
+import 'package:netflix_clone/view/home/widgets/background_card.dart';
+import 'package:netflix_clone/view/home/widgets/homepagemaintile.dart';
+import 'package:netflix_clone/view/home/widgets/homepagenumbercard.dart';
 
 ValueNotifier<bool> scrollNotifier = ValueNotifier(true);
 

@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
-import 'package:netflix_clone/presentation/main_page/widgets/main_page.dart';
+import 'package:netflix_clone/view/main_page/widgets/main_page.dart';
 
 void main() {
   runApp(MyApp());

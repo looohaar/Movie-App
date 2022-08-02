@@ -2,7 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/core/colors/constants/constants.dart';
-import 'package:netflix_clone/presentation/newandhot/widgets/commonwidgets.dart';
+import 'package:netflix_clone/view/newandhot/widgets/commonwidgets.dart';
 
 import '../../../core/colors/colors.dart';
 

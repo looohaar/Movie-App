@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:netflix_clone/presentation/fastlaughs/widgets/videolist.dart';
+import 'package:netflix_clone/view/fastlaughs/widgets/videolist.dart';
 
 class ScreenFastLaughs extends StatelessWidget {
   const ScreenFastLaughs({Key? key}) : super(key: key);

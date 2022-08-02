@@ -4,7 +4,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
 import 'package:netflix_clone/core/colors/constants/constants.dart';
-import 'package:netflix_clone/presentation/newandhot/widgets/commonwidgets.dart';
+import 'package:netflix_clone/view/newandhot/widgets/commonwidgets.dart';
 
 class EveryoneWatchingWidget extends StatelessWidget {
   const EveryoneWatchingWidget({Key? key}) : super(key: key);

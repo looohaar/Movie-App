@@ -8,9 +8,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:netflix_clone/core/colors/constants/constants.dart';
-import 'package:netflix_clone/presentation/search/widgets/commonwidgets.dart';
-import 'package:netflix_clone/presentation/search/widgets/search_page.dart';
-import 'package:netflix_clone/presentation/search/widgets/searchresult.dart';
+import 'package:netflix_clone/view/search/widgets/commonwidgets.dart';
+import 'package:netflix_clone/view/search/widgets/search_page.dart';
+import 'package:netflix_clone/view/search/widgets/searchresult.dart';
 
 String imageUrl1= 'https://www.themoviedb.org/t/p/w250_and_h141_face/nW5fUbldp1DYf2uQ3zJTUdachOu.jpg';
 String imageUrl2='https://www.themoviedb.org/t/p/w220_and_h330_face/pWHf4khOloNVfCxscsXFj3jj6gP.jpg';

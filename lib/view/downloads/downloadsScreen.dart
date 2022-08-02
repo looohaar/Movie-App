@@ -11,7 +11,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
 import 'package:netflix_clone/core/colors/constants/constants.dart';
-import 'package:netflix_clone/presentation/widgets/appbar_widget.dart';
+import 'package:netflix_clone/view/widgets/appbar_widget.dart';
 
 class ScreenDownloads extends StatelessWidget {
   
