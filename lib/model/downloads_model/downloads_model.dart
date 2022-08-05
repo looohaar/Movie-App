@@ -8,7 +8,7 @@ part 'downloads_model.g.dart';
 class DownloadsModel {
   List<Result>? results;
 
-  DownloadsModel({this.results=const []});
+  DownloadsModel({this.results = const []});
 
   factory DownloadsModel.fromJson(Map<String, dynamic> json) {
     return _$DownloadsModelFromJson(json);

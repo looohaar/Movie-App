@@ -114,21 +114,24 @@ class Section2 extends StatelessWidget {
                       ),
                       DownloadsImageWidget(
                         size: Size(size.width * 0.4, size.width * 0.55),
-                        imageList: "${baseUrl}${downloadsVariable.imageData!()?.results![0].posterPath}",
+                        imageList:
+                            "${baseUrl}${downloadsVariable.imageData!()?.results![0].posterPath}",
                         margin: EdgeInsets.only(right: 170),
                         angle: -19 * pi / 180,
                         radius: 10,
                       ),
                       DownloadsImageWidget(
                         size: Size(size.width * 0.4, size.width * 0.55),
-                        imageList: "${baseUrl}${downloadsVariable.imageData!()?.results![1].posterPath}",
+                        imageList:
+                            "${baseUrl}${downloadsVariable.imageData!()?.results![1].posterPath}",
                         margin: EdgeInsets.only(left: 170),
                         angle: 19 * pi / 180,
                         radius: 10,
                       ),
                       DownloadsImageWidget(
                         size: Size(size.width * 0.45, size.width * 0.65),
-                        imageList: "${baseUrl}${downloadsVariable.imageData!()?.results![2].posterPath}",
+                        imageList:
+                            "${baseUrl}${downloadsVariable.imageData!()?.results![2].posterPath}",
                         margin: EdgeInsets.only(top: 10),
                         angle: 0,
                         radius: 10,

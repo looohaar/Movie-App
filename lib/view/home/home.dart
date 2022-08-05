@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:get/get.dart';
+import 'package:netflix_clone/controller/home_controllers/trending_controller.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
 import 'package:netflix_clone/core/heights/constants.dart';
 import 'package:netflix_clone/view/home/widgets/background_card.dart';
@@ -17,6 +19,8 @@ class ScreenHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final trendingVariable= Get.put(TrendingController());
+    var baseUrl="https://image.tmdb.org/t/p/w500";
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: ValueListenableBuilder(

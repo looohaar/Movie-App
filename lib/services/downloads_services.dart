@@ -12,13 +12,14 @@ import 'package:netflix_clone/model/downloads_model/downloads_model.dart';
 import '../model/apiKey.dart';
 
 class DownloadsServices {
-  var url ="https://api.themoviedb.org/3/trending/all/day?api_key=a0a5787e52b44faadb0ed8d923d62cf2";
-      
+  var url =
+      "https://api.themoviedb.org/3/trending/all/day?api_key=a0a5787e52b44faadb0ed8d923d62cf2";
+
   Future<DownloadsModel?> fetchImage() async {
     try {
       var response = await http.get(Uri.parse(url));
       log("${response.statusCode}");
-      
+
       if (response.statusCode == 200 || response.statusCode == 201) {
         final decodedvalue = jsonDecode(response.body);
         return DownloadsModel.fromJson(decodedvalue);
