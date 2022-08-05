@@ -14,4 +14,9 @@ class DownloadsController extends GetxController {
       return null;
     }
   }
+  @override
+  void onInit() {
+    getImageData();
+    super.onInit();
+  }
 }

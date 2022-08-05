@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
 import 'package:netflix_clone/view/main_page/widgets/main_page.dart';
@@ -12,7 +13,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       theme: ThemeData(
           fontFamily: GoogleFonts.montserrat().fontFamily,
           scaffoldBackgroundColor: backgroundColor,

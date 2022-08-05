@@ -17,7 +17,8 @@ class DownloadsServices {
   Future<DownloadsModel?> fetchImage() async {
     try {
       var response = await http.get(Uri.parse(url));
-      log("${response.body}");
+      log("${response.statusCode}");
+      
       if (response.statusCode == 200 || response.statusCode == 201) {
         final decodedvalue = jsonDecode(response.body);
         return DownloadsModel.fromJson(decodedvalue);
