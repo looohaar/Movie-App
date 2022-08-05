@@ -5,7 +5,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
-import 'package:netflix_clone/core/colors/constants/constants.dart';
+import 'package:netflix_clone/core/heights/constants.dart';
 import 'package:netflix_clone/view/home/widgets/background_card.dart';
 import 'package:netflix_clone/view/home/widgets/homepagemaintile.dart';
 import 'package:netflix_clone/view/home/widgets/homepagenumbercard.dart';
@@ -72,8 +72,8 @@ class ScreenHome extends StatelessWidget {
                   ),
                   scrollNotifier.value == true
                       ? AnimatedContainer(
-                        duration: Duration(seconds: 2),
-                        child: Container(
+                          duration: Duration(seconds: 2),
+                          child: Container(
                             decoration: BoxDecoration(
                                 gradient: LinearGradient(
                                     colors: [kBlackColor, Colors.transparent],
@@ -132,7 +132,7 @@ class ScreenHome extends StatelessWidget {
                               ],
                             ),
                           ),
-                      )
+                        )
                       : kheight
                 ],
               ),

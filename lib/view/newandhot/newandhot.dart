@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
-import 'package:netflix_clone/core/colors/constants/constants.dart';
+import 'package:netflix_clone/core/heights/constants.dart';
 import 'package:netflix_clone/view/newandhot/widgets/comingsoonwidget.dart';
 import 'package:netflix_clone/view/newandhot/widgets/commonwidgets.dart';
 
@@ -26,12 +26,11 @@ class ScreenNewAndHot extends StatelessWidget {
           child: CustomAppBar(title: 'New & Hot'),
         ),
         body: Padding(
-          padding: const EdgeInsets.only(top:15),
-          child: TabBarView(
-              children: [
-                comingSoonBluilder(context),
-              EveryoneWatchingBuilder(context),
-              ]),
+          padding: const EdgeInsets.only(top: 15),
+          child: TabBarView(children: [
+            comingSoonBluilder(context),
+            EveryoneWatchingBuilder(context),
+          ]),
         ),
       ),
     );
@@ -41,18 +40,14 @@ class ScreenNewAndHot extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return ListView.builder(
       itemCount: 10,
-       itemBuilder: (context, index)=>ComingSooonWidget(),
-        
-     
+      itemBuilder: (context, index) => ComingSooonWidget(),
     );
   }
 
-Widget  EveryoneWatchingBuilder(BuildContext context){
-  final Size size = MediaQuery.of(context).size;
-  return ListView.builder(
-    itemCount: 10,
-  itemBuilder: (context, index)=> EveryoneWatchingWidget());
+  Widget EveryoneWatchingBuilder(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+    return ListView.builder(
+        itemCount: 10,
+        itemBuilder: (context, index) => EveryoneWatchingWidget());
+  }
 }
-
-}
-

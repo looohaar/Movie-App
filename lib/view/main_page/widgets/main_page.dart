@@ -1,5 +1,3 @@
-
-
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -14,8 +12,8 @@ import 'package:netflix_clone/view/newandhot/newandhot.dart';
 import 'package:netflix_clone/view/search/search.dart';
 
 class MainPage extends StatelessWidget {
-   MainPage({Key? key}) : super(key: key);
-  final _pages=[
+  MainPage({Key? key}) : super(key: key);
+  final _pages = [
     ScreenHome(),
     ScreenNewAndHot(),
     ScreenFastLaughs(),
@@ -25,16 +23,14 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
       body: SafeArea(
-        child: ValueListenableBuilder(valueListenable: indexChangeNotifier,
-         builder: (context, int index, _){
-          return _pages[index];
-      
-         }),
+        child: ValueListenableBuilder(
+            valueListenable: indexChangeNotifier,
+            builder: (context, int index, _) {
+              return _pages[index];
+            }),
       ),
       bottomNavigationBar: BottomNavigationWidget(),
     );
-    
   }
 }

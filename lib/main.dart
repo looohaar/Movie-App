@@ -7,27 +7,22 @@ import 'package:netflix_clone/view/main_page/widgets/main_page.dart';
 
 void main() {
   runApp(MyApp());
-  
 }
-class MyApp extends StatelessWidget{
+
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-   return MaterialApp(
-    
-    theme: ThemeData(
-      fontFamily: GoogleFonts.montserrat().fontFamily,
-      scaffoldBackgroundColor: backgroundColor,
-      primarySwatch: Colors.blue,
-      backgroundColor: Colors.black,
-      textTheme: TextTheme(
-        bodyText1: TextStyle(color: Colors.white),
-        bodyText2: TextStyle(color: Colors.white)
-
-      )
-    ),
-    debugShowCheckedModeBanner: false,
-    home: MainPage(),
-   );
-   
+    return MaterialApp(
+      theme: ThemeData(
+          fontFamily: GoogleFonts.montserrat().fontFamily,
+          scaffoldBackgroundColor: backgroundColor,
+          primarySwatch: Colors.blue,
+          backgroundColor: Colors.black,
+          textTheme: TextTheme(
+              bodyText1: TextStyle(color: Colors.white),
+              bodyText2: TextStyle(color: Colors.white))),
+      debugShowCheckedModeBanner: false,
+      home: MainPage(),
+    );
   }
 }
