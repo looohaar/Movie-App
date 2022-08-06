@@ -19,8 +19,8 @@ class ScreenHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final trendingVariable= Get.put(TrendingController());
-    var baseUrl="https://image.tmdb.org/t/p/w500";
+    final trendingVariable = Get.put(TrendingController());
+    var baseUrl = "https://image.tmdb.org/t/p/w500";
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: ValueListenableBuilder(
@@ -38,41 +38,69 @@ class ScreenHome extends StatelessWidget {
               },
               child: Stack(
                 children: [
-                  ListView(
-                    children: [
-                      BackGroundCard(
-                        url:
-                            'https://www.themoviedb.org/t/p/w220_and_h330_face/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg',
-                      ),
-                      kheight,
-                      HomePageMainTile(
-                        heading: 'Released in the past year',
-                        url:
-                            'https://www.themoviedb.org/t/p/w220_and_h330_face/p9ZUzCyy9wRTDuuQexkQ78R2BgF.jpg',
-                      ),
-                      kheight,
-                      HomePageMainTile(
+                  Obx(
+                    ()=> ListView(
+                      children: [
+                        BackGroundCard(
+                          url:
+                              'https://www.themoviedb.org/t/p/w220_and_h330_face/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg',
+                        ),
+                        kheight,
+                        HomePageMainTile(
                           heading: 'Trending',
+                          children: List.generate(
+                              trendingVariable.imageData!()!.results!.length,
+                              (index) {
+                            return MainPageCard(
+                              url:
+                                  "${baseUrl}${trendingVariable.imageData!()?.results![index].posterPath}",
+                            );
+                          }),
+                        ),
+                        kheight,
+                        HomePageMainTile(
+                          heading: 'Trending',
+                          children: List.generate(
+                              trendingVariable.imageData!()!.results!.length,
+                              (index) {
+                            return MainPageCard(
+                              url:
+                                  "${baseUrl}${trendingVariable.imageData!()?.results![index].posterPath}",
+                            );
+                          }),
+                        ),
+                        kheight,
+                        HomepageNumberCard(
+                          heading: 'Top 10 TV Shows In India ',
                           url:
-                              'https://www.themoviedb.org/t/p/w220_and_h330_face/8cXbitsS6dWQ5gfMTZdorpAAzEH.jpg'),
-                      kheight,
-                      HomepageNumberCard(
-                        heading: 'Top 10 TV Shows In India ',
-                        url:
-                            'https://www.themoviedb.org/t/p/w220_and_h330_face/ox4goZd956BxqJH6iLwhWPL9ct4.jpg',
-                      ),
-                      kheight,
-                      HomePageMainTile(
-                          heading: 'Tense Dramas',
-                          url:
-                              'https://www.themoviedb.org/t/p/w220_and_h330_face/cXUqtadGsIcZDWUTrfnbDjAy8eN.jpg'),
-                      kheight,
-                      HomePageMainTile(
-                        heading: 'South Indian Films',
-                        url:
-                            'https://www.themoviedb.org/t/p/w300_and_h450_bestv2/n1pDcXST1I137DcUjWUv1Ar13TW.jpg',
-                      ),
-                    ],
+                              'https://www.themoviedb.org/t/p/w220_and_h330_face/ox4goZd956BxqJH6iLwhWPL9ct4.jpg',
+                        ),
+                        kheight,
+                        HomePageMainTile(
+                          heading: 'Trending',
+                          children: List.generate(
+                              trendingVariable.imageData!()!.results!.length,
+                              (index) {
+                            return MainPageCard(
+                              url:
+                                  "${baseUrl}${trendingVariable.imageData!()?.results![index].posterPath}",
+                            );
+                          }),
+                        ),
+                        kheight,
+                        HomePageMainTile(
+                          heading: 'Trending',
+                          children: List.generate(
+                              trendingVariable.imageData!()!.results!.length,
+                              (index) {
+                            return MainPageCard(
+                              url:
+                                  "${baseUrl}${trendingVariable.imageData!()?.results![index].posterPath}",
+                            );
+                          }),
+                        ),
+                      ],
+                    ),
                   ),
                   scrollNotifier.value == true
                       ? AnimatedContainer(

@@ -8,6 +8,7 @@ class TrendingServices {
   Future<HomeTrendingModel?> fetchImage()async{
     try {
       var response= await http.get(Uri.parse(url));
+      //  var response1= await http.put(Uri.parse(url));
       if (response.statusCode==200||response.statusCode==201) {
         final decodedValue= json.decode(response.body);
         return HomeTrendingModel.fromJson(decodedValue);

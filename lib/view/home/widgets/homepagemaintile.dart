@@ -4,13 +4,16 @@ import '../../../core/heights/constants.dart';
 import '../home.dart';
 
 class HomePageMainTile extends StatelessWidget {
-  const HomePageMainTile({Key? key, required this.heading, required this.url})
+  const HomePageMainTile({Key? key, required this.heading,
+  required this.children})
       : super(key: key);
 
   final String heading;
-  final String url;
+  // final String url;
+  final List<Widget> children;
   @override
   Widget build(BuildContext context) {
+  
     final Size size = MediaQuery.of(context).size;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,11 +29,7 @@ class HomePageMainTile extends StatelessWidget {
           // maxWidth:  size.width*0.4,
           child: ListView(
             scrollDirection: Axis.horizontal,
-            children: List.generate(20, (index) {
-              return MainPageCard(
-                url: url,
-              );
-            }),
+            children: children,
           ),
         )
       ],
@@ -72,3 +71,10 @@ class MainPageCard extends StatelessWidget {
     );
   }
 }
+
+
+// List.generate(20, (index) {
+//               return MainPageCard(
+//                 url: url,
+//               );
+//             }),
