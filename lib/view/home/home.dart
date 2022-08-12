@@ -65,7 +65,7 @@ class ScreenHome extends StatelessWidget {
                         HomePageMainTile(
                           heading: 'Top Movies',
                           children: List.generate(
-                              topMoviesVariable.imageData().results!.length,
+                              topMoviesVariable.imageData!()!.results!.length,
                               (index) {
                             return MainPageCard(
                               url:
@@ -83,7 +83,7 @@ class ScreenHome extends StatelessWidget {
                         HomePageMainTile(
                           heading: 'Upcoming',
                           children: List.generate(
-                              upcominMoviesVariable.imageData().results!.length,
+                              upcominMoviesVariable.imageData!()!.results!.length,
                               (index) {
                             return MainPageCard(
                               url:
