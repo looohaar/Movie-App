@@ -5,7 +5,9 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
+import 'package:netflix_clone/controller/home_controllers/topmovies_controlle.dart';
 import 'package:netflix_clone/controller/home_controllers/trending_controller.dart';
+import 'package:netflix_clone/controller/home_controllers/upcoming_controller.dart';
 import 'package:netflix_clone/core/colors/colors.dart';
 import 'package:netflix_clone/core/heights/constants.dart';
 import 'package:netflix_clone/view/home/widgets/background_card.dart';
@@ -20,6 +22,8 @@ class ScreenHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final trendingVariable = Get.put(TrendingController());
+    final topMoviesVariable = Get.put(TopMoviesController());
+    final upcominMoviesVariable= Get.put(UpcomingController());
     var baseUrl = "https://image.tmdb.org/t/p/w500";
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
@@ -39,7 +43,7 @@ class ScreenHome extends StatelessWidget {
               child: Stack(
                 children: [
                   Obx(
-                    ()=> ListView(
+                    () => ListView(
                       children: [
                         BackGroundCard(
                           url:
@@ -59,13 +63,13 @@ class ScreenHome extends StatelessWidget {
                         ),
                         kheight,
                         HomePageMainTile(
-                          heading: 'Trending',
+                          heading: 'Top Movies',
                           children: List.generate(
-                              trendingVariable.imageData!()!.results!.length,
+                              topMoviesVariable.imageData().results!.length,
                               (index) {
                             return MainPageCard(
                               url:
-                                  "${baseUrl}${trendingVariable.imageData!()?.results![index].posterPath}",
+                                  "${baseUrl}${topMoviesVariable.imageData!()?.results![index].posterPath}",
                             );
                           }),
                         ),
@@ -77,13 +81,13 @@ class ScreenHome extends StatelessWidget {
                         ),
                         kheight,
                         HomePageMainTile(
-                          heading: 'Trending',
+                          heading: 'Upcoming',
                           children: List.generate(
-                              trendingVariable.imageData!()!.results!.length,
+                              upcominMoviesVariable.imageData().results!.length,
                               (index) {
                             return MainPageCard(
                               url:
-                                  "${baseUrl}${trendingVariable.imageData!()?.results![index].posterPath}",
+                                  "${baseUrl}${upcominMoviesVariable.imageData!()?.results![index].posterPath}",
                             );
                           }),
                         ),
@@ -173,3 +177,11 @@ class ScreenHome extends StatelessWidget {
     );
   }
 }
+
+// {
+//   "results": [
+//     {
+//       "poster_path": ""
+//     }
+//   ]
+// }

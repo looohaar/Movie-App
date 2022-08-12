@@ -1,20 +1,20 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'home_trending_model.dart';
+part of 'home_topmovies_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-HomeTrendingModel _$HomeTrendingModelFromJson(Map<String, dynamic> json) =>
-    HomeTrendingModel(
+HomeTopmoviesModel _$HomeTopmoviesModelFromJson(Map<String, dynamic> json) =>
+    HomeTopmoviesModel(
       results: (json['results'] as List<dynamic>?)
               ?.map((e) => Result.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
     );
 
-Map<String, dynamic> _$HomeTrendingModelToJson(HomeTrendingModel instance) =>
+Map<String, dynamic> _$HomeTopmoviesModelToJson(HomeTopmoviesModel instance) =>
     <String, dynamic>{
       'results': instance.results,
     };

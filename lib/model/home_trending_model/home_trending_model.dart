@@ -8,7 +8,7 @@ part 'home_trending_model.g.dart';
 class HomeTrendingModel {
   List<Result>? results;
 
-  HomeTrendingModel({this.results= const[]});
+  HomeTrendingModel({this.results = const []});
 
   factory HomeTrendingModel.fromJson(Map<String, dynamic> json) {
     return _$HomeTrendingModelFromJson(json);
